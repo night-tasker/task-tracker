@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NightTasker.TaskTracker.Presentation", "NightTasker.TaskTracker.Presentation", "{CD6B8446-D90B-475E-8B1E-A540D95D91B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Presentation.WebApi", "NightTasker.TaskTracker.Presentation\NightTasker.TaskTracker.Presentation.WebApi\NightTasker.TaskTracker.Presentation.WebApi.csproj", "{9EEE7753-4CC2-4793-B063-84C76599F001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NightTasker.TaskTracker.Core", "NightTasker.TaskTracker.Core", "{445CED7D-4446-41BD-B1DC-AD6E060F4895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Core.Domain", "NightTasker.TaskTracker.Core\NightTasker.TaskTracker.Core.Domain\NightTasker.TaskTracker.Core.Domain.csproj", "{3D950073-2671-4A7B-AC6E-5B7195CC99C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Core.Application", "NightTasker.TaskTracker.Core\NightTasker.TaskTracker.Core.Application\NightTasker.TaskTracker.Core.Application.csproj", "{3A733923-EEBE-4FEC-A23D-F7529E460F3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NightTasker.TaskTracker.Infrastructure", "NightTasker.TaskTracker.Infrastructure", "{1DB51695-CCAA-4217-8806-C849CC64B050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Infrastructure.Persistence", "NightTasker.TaskTracker.Infrastructure\NightTasker.TaskTracker.Infrastructure.Persistence\NightTasker.TaskTracker.Infrastructure.Persistence.csproj", "{B82C5067-83FA-4376-81A8-8C2E9F5129D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Infrastructure.Messaging", "NightTasker.TaskTracker.Infrastructure\NightTasker.TaskTracker.Infrastructure.Messaging\NightTasker.TaskTracker.Infrastructure.Messaging.csproj", "{C0840E8C-4921-4D49-A7B6-00905F8ADA91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9EEE7753-4CC2-4793-B063-84C76599F001} = {CD6B8446-D90B-475E-8B1E-A540D95D91B2}
+		{3D950073-2671-4A7B-AC6E-5B7195CC99C8} = {445CED7D-4446-41BD-B1DC-AD6E060F4895}
+		{3A733923-EEBE-4FEC-A23D-F7529E460F3F} = {445CED7D-4446-41BD-B1DC-AD6E060F4895}
+		{B82C5067-83FA-4376-81A8-8C2E9F5129D4} = {1DB51695-CCAA-4217-8806-C849CC64B050}
+		{C0840E8C-4921-4D49-A7B6-00905F8ADA91} = {1DB51695-CCAA-4217-8806-C849CC64B050}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EEE7753-4CC2-4793-B063-84C76599F001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EEE7753-4CC2-4793-B063-84C76599F001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EEE7753-4CC2-4793-B063-84C76599F001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EEE7753-4CC2-4793-B063-84C76599F001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D950073-2671-4A7B-AC6E-5B7195CC99C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D950073-2671-4A7B-AC6E-5B7195CC99C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D950073-2671-4A7B-AC6E-5B7195CC99C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D950073-2671-4A7B-AC6E-5B7195CC99C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A733923-EEBE-4FEC-A23D-F7529E460F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A733923-EEBE-4FEC-A23D-F7529E460F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A733923-EEBE-4FEC-A23D-F7529E460F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A733923-EEBE-4FEC-A23D-F7529E460F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82C5067-83FA-4376-81A8-8C2E9F5129D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82C5067-83FA-4376-81A8-8C2E9F5129D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82C5067-83FA-4376-81A8-8C2E9F5129D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82C5067-83FA-4376-81A8-8C2E9F5129D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
