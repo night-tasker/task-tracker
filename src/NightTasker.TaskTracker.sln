@@ -16,6 +16,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Inf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Infrastructure.Messaging", "NightTasker.TaskTracker.Infrastructure\NightTasker.TaskTracker.Infrastructure.Messaging\NightTasker.TaskTracker.Infrastructure.Messaging.csproj", "{C0840E8C-4921-4D49-A7B6-00905F8ADA91}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NightTasker.TaskTracker.IntegrationTests", "NightTasker.TaskTracker.IntegrationTests", "{2C98C484-6266-4063-8213-3C8DDF07D973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.Core.Application.IntegrationTests", "NightTasker.TaskTracker.IntegrationTests\NightTasker.TaskTracker.Core.Application.IntegrationTests\NightTasker.TaskTracker.Core.Application.IntegrationTests.csproj", "{EC072E86-AA59-474F-8682-D4403D0EA1DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightTasker.TaskTracker.IntegrationTests.Framework", "NightTasker.TaskTracker.IntegrationTests\NightTasker.TaskTracker.IntegrationTests.Framework\NightTasker.TaskTracker.IntegrationTests.Framework.csproj", "{9BFAAC64-8B77-4964-AD94-FF62277D7D93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,8 @@ Global
 		{3A733923-EEBE-4FEC-A23D-F7529E460F3F} = {445CED7D-4446-41BD-B1DC-AD6E060F4895}
 		{B82C5067-83FA-4376-81A8-8C2E9F5129D4} = {1DB51695-CCAA-4217-8806-C849CC64B050}
 		{C0840E8C-4921-4D49-A7B6-00905F8ADA91} = {1DB51695-CCAA-4217-8806-C849CC64B050}
+		{EC072E86-AA59-474F-8682-D4403D0EA1DD} = {2C98C484-6266-4063-8213-3C8DDF07D973}
+		{9BFAAC64-8B77-4964-AD94-FF62277D7D93} = {2C98C484-6266-4063-8213-3C8DDF07D973}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9EEE7753-4CC2-4793-B063-84C76599F001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,5 +57,13 @@ Global
 		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0840E8C-4921-4D49-A7B6-00905F8ADA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC072E86-AA59-474F-8682-D4403D0EA1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC072E86-AA59-474F-8682-D4403D0EA1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC072E86-AA59-474F-8682-D4403D0EA1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC072E86-AA59-474F-8682-D4403D0EA1DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFAAC64-8B77-4964-AD94-FF62277D7D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFAAC64-8B77-4964-AD94-FF62277D7D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFAAC64-8B77-4964-AD94-FF62277D7D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFAAC64-8B77-4964-AD94-FF62277D7D93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

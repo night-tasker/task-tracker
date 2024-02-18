@@ -25,4 +25,10 @@
         <ProjectReference Include="..\..\NightTasker.TaskTracker.Core\NightTasker.TaskTracker.Core.Application\NightTasker.TaskTracker.Core.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>NightTasker.TaskTracker.Core.Application.IntegrationTests</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+
 </Project>
