@@ -16,6 +16,9 @@ internal sealed class UnitOfWork(ApplicationDbContext dbContext) : IUnitOfWork
     public IOrganizationUsersRepository OrganizationUsersRepository { get; } = 
         new OrganizationUsersRepository(new ApplicationDbSet<OrganizationUser, Guid>(dbContext));
 
+    public IProblemsRepository ProblemsRepository { get; } =
+        new ProblemsRepository(new ApplicationDbSet<Problem, Guid>(dbContext));
+
     public Task SaveChanges(CancellationToken cancellationToken)
     {
         return dbContext.SaveChangesAsync(cancellationToken);

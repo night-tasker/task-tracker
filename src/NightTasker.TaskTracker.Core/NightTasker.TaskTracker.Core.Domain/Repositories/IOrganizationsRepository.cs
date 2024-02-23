@@ -9,4 +9,8 @@ public interface IOrganizationsRepository : IRepository<Organization, Guid>
         Guid organizationId, 
         bool trackChanges,
         CancellationToken cancellationToken);
+
+    Task<bool> CheckOrganizationExists(
+        Guid organizationId,
+        CancellationToken cancellationToken);
 }

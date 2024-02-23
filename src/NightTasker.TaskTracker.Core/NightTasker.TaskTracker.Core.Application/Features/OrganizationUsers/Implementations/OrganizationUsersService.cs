@@ -1,5 +1,6 @@
-﻿using NightTasker.TaskTracker.Core.Application.Exceptions.NotFound;
-using NightTasker.TaskTracker.Core.Application.Features.OrganizationUsers.Contracts;
+﻿using NightTasker.TaskTracker.Core.Application.Features.OrganizationUsers.Contracts;
+using NightTasker.TaskTracker.Core.Domain.Core.Exceptions.Organizations;
+using NightTasker.TaskTracker.Core.Domain.Core.Exceptions.Users;
 using NightTasker.TaskTracker.Core.Domain.DataTransferObjects.OrganizationUsers;
 using NightTasker.TaskTracker.Core.Domain.Repositories;
 

@@ -2,4 +2,4 @@
 
 namespace NightTasker.TaskTracker.Core.Domain.DataTransferObjects.OrganizationUsers;
 
-public sealed record CreateOrganizationUserDto(Guid Id, Guid UserId, OrganizationUserRole Role);
+public sealed record CreateOrganizationUserDto(Guid UserId, OrganizationUserRole Role);

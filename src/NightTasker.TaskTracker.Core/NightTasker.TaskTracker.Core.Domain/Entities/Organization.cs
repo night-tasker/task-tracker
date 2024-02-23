@@ -1,7 +1,6 @@
 ﻿using NightTasker.Common.Core.Abstractions;
+using NightTasker.TaskTracker.Core.Domain.Core.Primitives;
 using NightTasker.TaskTracker.Core.Domain.DataTransferObjects.OrganizationUsers;
-using NightTasker.TaskTracker.Core.Domain.Enums;
-using NightTasker.TaskTracker.Core.Domain.Primitives;
 using NightTasker.TaskTracker.Core.Domain.Repositories;
 
 namespace NightTasker.TaskTracker.Core.Domain.Entities;
@@ -22,6 +21,8 @@ public class Organization : AggregateRoot, IEntityWithId<Guid>, IDateTimeOffsetM
     public Guid Id { get; private set; }
         
     public IReadOnlyCollection<OrganizationUser> OrganizationUsers { get; } = null!;
+
+    public IReadOnlyCollection<Problem> Problems { get; set; }
     
     public DateTimeOffset CreatedDateTimeOffset { get; set; }
     
@@ -34,7 +35,7 @@ public class Organization : AggregateRoot, IEntityWithId<Guid>, IDateTimeOffsetM
         CancellationToken cancellationToken)
     {
         var organizationUsers = users
-            .Select(x => OrganizationUser.CreateInstance(x.Id, Id, x.UserId, x.Role))
+            .Select(x => OrganizationUser.CreateInstance(Id, x.UserId, x.Role))
             .ToArray();
         return organizationUsersRepository.AddRange(organizationUsers, cancellationToken);
     }

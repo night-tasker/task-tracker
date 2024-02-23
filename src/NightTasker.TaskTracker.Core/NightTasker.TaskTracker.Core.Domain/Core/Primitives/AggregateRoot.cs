@@ -1,4 +1,4 @@
-﻿namespace NightTasker.TaskTracker.Core.Domain.Primitives;
+﻿namespace NightTasker.TaskTracker.Core.Domain.Core.Primitives;
 
 public abstract class AggregateRoot : IAggregateRoot
 {

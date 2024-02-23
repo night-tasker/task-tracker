@@ -1,5 +1,5 @@
 ﻿using NightTasker.Common.Core.Abstractions;
-using NightTasker.TaskTracker.Core.Domain.Primitives;
+using NightTasker.TaskTracker.Core.Domain.Core.Primitives;
 
 namespace NightTasker.TaskTracker.Core.Domain.Entities;
 

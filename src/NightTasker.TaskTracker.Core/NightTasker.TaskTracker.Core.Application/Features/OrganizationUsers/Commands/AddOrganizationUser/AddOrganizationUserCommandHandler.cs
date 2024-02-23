@@ -16,8 +16,7 @@ internal sealed class AddOrganizationUserCommandHandler(
 
     public async Task Handle(AddOrganizationUserCommand request, CancellationToken cancellationToken)
     {
-        var createOrganizationUserDto = new CreateOrganizationUserDto(
-            request.OrganizationUserId, request.UserId, request.Role);
+        var createOrganizationUserDto = new CreateOrganizationUserDto(request.UserId, request.Role);
         await _organizationUsersService.CreateOrganizationUser(
             request.OrganizationId, createOrganizationUserDto, cancellationToken);
         await _unitOfWork.SaveChanges(cancellationToken);

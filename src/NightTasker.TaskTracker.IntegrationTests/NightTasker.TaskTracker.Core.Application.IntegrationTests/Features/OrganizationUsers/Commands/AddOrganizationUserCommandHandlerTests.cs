@@ -2,10 +2,11 @@
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using NightTasker.TaskTracker.Core.Application.Exceptions.NotFound;
 using NightTasker.TaskTracker.Core.Application.Features.OrganizationUsers.Commands.AddOrganizationUser;
 using NightTasker.TaskTracker.Core.Application.Features.OrganizationUsers.Contracts;
 using NightTasker.TaskTracker.Core.Application.Features.OrganizationUsers.Implementations;
+using NightTasker.TaskTracker.Core.Domain.Core.Exceptions.Organizations;
+using NightTasker.TaskTracker.Core.Domain.Core.Exceptions.Users;
 using NightTasker.TaskTracker.Core.Domain.Entities;
 using NightTasker.TaskTracker.Core.Domain.Enums;
 using NightTasker.TaskTracker.Core.Domain.Repositories;
@@ -49,8 +50,7 @@ public class AddOrganizationUserCommandHandlerTests : ApplicationIntegrationTest
         // act
         await using (var actScope = CreateAsyncScope())
         {
-            var command = new AddOrganizationUserCommand(
-                Guid.NewGuid(), organizationId, userId, OrganizationUserRole.Member);
+            var command = new AddOrganizationUserCommand(organizationId, userId, OrganizationUserRole.Member);
             var sut = actScope.ServiceProvider.GetRequiredService<AddOrganizationUserCommandHandler>();
             
             var act = async () => await sut.Handle(command, CancellationToken);
@@ -80,8 +80,7 @@ public class AddOrganizationUserCommandHandlerTests : ApplicationIntegrationTest
         // act
         await using (var actScope = CreateAsyncScope())
         {
-            var command = new AddOrganizationUserCommand(
-                Guid.NewGuid(), organizationId, userId, OrganizationUserRole.Member);
+            var command = new AddOrganizationUserCommand(organizationId, userId, OrganizationUserRole.Member);
             var sut = actScope.ServiceProvider.GetRequiredService<AddOrganizationUserCommandHandler>();
             
             var act = async () => await sut.Handle(command, CancellationToken);
@@ -114,8 +113,7 @@ public class AddOrganizationUserCommandHandlerTests : ApplicationIntegrationTest
         // act
         await using (var actScope = CreateAsyncScope())
         {
-            var command = new AddOrganizationUserCommand(
-                organizationUserId, organizationId, userId, role);
+            var command = new AddOrganizationUserCommand(organizationId, userId, role);
             var sut = actScope.ServiceProvider.GetRequiredService<AddOrganizationUserCommandHandler>();
             await sut.Handle(command, CancellationToken);
         }
@@ -132,7 +130,6 @@ public class AddOrganizationUserCommandHandlerTests : ApplicationIntegrationTest
 
             organization.OrganizationUsers.Should().HaveCount(1);
             var createdOrganizationUser = organization.OrganizationUsers.First();
-            createdOrganizationUser.Id.Should().Be(organizationUserId);
             createdOrganizationUser.Role.Should().Be(role);
             createdOrganizationUser.User.Id.Should().Be(userId);
         }

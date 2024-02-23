@@ -61,7 +61,7 @@ public class CreateOrganizationCommandHandlerTests : ApplicationIntegrationTests
         var organizationId = _faker.Random.Guid();
         var organizationUsers = new CreateOrganizationUserDto[]
         {
-            new(Guid.NewGuid(), Guid.NewGuid(), OrganizationUserRole.Member),
+            new(Guid.NewGuid(), OrganizationUserRole.Member),
         };
         await using (var arrangeScope = CreateAsyncScope())
         {
@@ -92,7 +92,6 @@ public class CreateOrganizationCommandHandlerTests : ApplicationIntegrationTests
             
             organization.OrganizationUsers.Should().HaveCount(1);
             var organizationUser = organization.OrganizationUsers.First();
-            organizationUser.Id.Should().Be(organizationUsers[0].Id);
             organizationUser.UserId.Should().Be(organizationUsers[0].UserId);
             organizationUser.Role.Should().Be(organizationUsers[0].Role);
         }

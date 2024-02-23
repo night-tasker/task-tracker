@@ -1,6 +1,7 @@
 ﻿using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NightTasker.TaskTracker.Infrastructure.Messaging.Consumers.Events.Users;
 using NightTasker.TaskTracker.Infrastructure.Messaging.Settings;
 
 namespace NightTasker.TaskTracker.Infrastructure.Messaging.Configuration;
@@ -24,6 +25,11 @@ public static class ServiceCollectionExtensions
                 {
                     hostConfig.Username(rabbitMqSettings.Username);
                     hostConfig.Password(rabbitMqSettings.Password);
+                });
+                
+                rabbitMqConfig.ReceiveEndpoint("task.tracker.user.registered", ep =>
+                {
+                    ep.ConfigureConsumer<UserRegisteredConsumer>(context);
                 });
 
                 rabbitMqConfig.ConfigureEndpoints(context);

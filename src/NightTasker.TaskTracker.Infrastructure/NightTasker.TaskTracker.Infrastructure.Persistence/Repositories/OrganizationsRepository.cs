@@ -24,4 +24,12 @@ internal sealed class OrganizationsRepository(ApplicationDbSet<Organization, Gui
         return query
             .SingleOrDefaultAsync(x => x.Id == organizationId, cancellationToken);
     }
+    
+    public Task<bool> CheckOrganizationExists(
+        Guid organizationId, 
+        CancellationToken cancellationToken)
+    {
+        return Entities
+            .AnyAsync(x => x.Id == organizationId, cancellationToken);
+    }
 }
