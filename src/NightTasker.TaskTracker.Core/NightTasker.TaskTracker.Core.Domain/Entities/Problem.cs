@@ -6,6 +6,11 @@ namespace NightTasker.TaskTracker.Core.Domain.Entities;
 
 public class Problem : IEntityWithId<Guid>, IDateTimeOffsetModification
 {
+    private Problem()
+    {
+        
+    }
+    
     private Problem(
         Guid id,
         Guid organizationId,

@@ -1,7 +1,7 @@
 ﻿#pragma warning disable CA2255
 using System.Runtime.CompilerServices;
 
-namespace NightTasker.UserHub.Infrastructure.Persistence.Configuration;
+namespace NightTasker.TaskTracker.Infrastructure.Persistence.Configuration;
 
 public static class ModuleInitializer
 {

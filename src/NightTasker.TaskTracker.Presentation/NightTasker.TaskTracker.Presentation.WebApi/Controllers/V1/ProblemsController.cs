@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NightTasker.Common.Core.Identity.Contracts;
 using NightTasker.TaskTracker.Core.Application.Features.Problems.Commands.CreateProblem;
+using NightTasker.TaskTracker.Core.Application.Features.Problems.Commands.GetProblemsAssignedToUser;
 using NightTasker.TaskTracker.Presentation.WebApi.Requests.Problems;
 
 namespace NightTasker.TaskTracker.Presentation.WebApi.Controllers.V1;
@@ -24,5 +25,14 @@ public class ProblemsController(
         var command = new CreateProblemCommand(problemDto.Text, problemDto.OrganizationId, userId!.Value);
         var problemId = await _sender.Send(command, cancellationToken);
         return Ok(problemId);
+    }
+    
+    [HttpGet("assigned-to-user")]
+    public async Task<IActionResult> GetProblemsAssignedToUser(CancellationToken cancellationToken)
+    {
+        var userId = _identityService.CurrentUserId!.Value;
+        var problems = await _sender.Send(
+            new GetProblemsAssignedToUserQuery(userId), cancellationToken);
+        return Ok(problems);
     }
 }

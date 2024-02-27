@@ -12,7 +12,8 @@ public class ProblemEntityConfiguration : IEntityTypeConfiguration<Problem>
 
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Text);
+        builder.Property(x => x.Text)
+            .HasMaxLength(1000);
 
         builder.HasOne(problem => problem.Organization)
             .WithMany(organization => organization.Problems)
